@@ -14,14 +14,66 @@
 
 
 <ion-content padding>
-  <div class="list card">
-    <div class="item">
-      <h2>{{user.name.title}} {{user.name.first}} {{user.name.last}}</h2>
-      <p>{{user.email}}</p>
-      <p>{{person.phone}}</p>
+  <ion-card>
+    <div class="list card">
+        <div class="item item-image">
+          <img [src]="user.picture.large" alt="" id="image">
+        </div>
+      <div class="item">
+        <ion-row class="row-item">
+          <ion-col col-1>
+              <ion-icon name='person'></ion-icon>
+          </ion-col>
+          <ion-col class="cols">
+              <h2>{{user.name.title}} {{user.name.first}} {{user.name.last}}</h2>
+          </ion-col>
+        </ion-row>
+        <ion-row class="row-item">
+            <ion-col col-1>
+                <ion-icon name='mail'></ion-icon>
+            </ion-col>
+            <ion-col class="cols">
+                <p>{{user.email}}</p>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-item">
+            <ion-col col-1>
+                <ion-icon name='call'></ion-icon>
+            </ion-col>
+            <ion-col class="cols">
+                <p>{{person.phone}}</p>
+            </ion-col>
+        </ion-row>
+        <ion-row class="row-item">
+            <ion-col col-1>
+                <ion-icon name='pin'></ion-icon>
+            </ion-col>
+            <ion-col class="cols">
+                <p>{{person.location.street}} {{person.location.city}} {{person.location.postcode}} {{person.location.state}}</p>
+            </ion-col>
+        </ion-row>
+      </div>
     </div>
-    <div class="item item-image">
-      <img [src]="user.picture.thumbnail" alt="">
-    </div>
-  </div>
+
+    <ion-row class="row">
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='call'></ion-icon>
+            Call
+          </button>
+        </ion-col>
+        <ion-col text-center>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='chatboxes'></ion-icon>
+            Message
+          </button>
+        </ion-col>
+        <ion-col text-right>
+          <button ion-button clear small color="danger" icon-start>
+            <ion-icon name='flag'></ion-icon>
+            Flag
+          </button>
+        </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>

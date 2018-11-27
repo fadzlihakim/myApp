@@ -1,3 +1,32 @@
 page-detail-contact {
 
+    .item-image
+    {
+        margin: auto;
+        text-align: center;
+        width: 200px;
+    }
+
+    #image
+    {
+        left: 50%;
+        padding: 20px 10px;
+        border-radius: 50%;
+    }
+
+    .col
+    {
+        padding-left: 0px;
+    }
+
+    .row
+    {
+        padding-top: 20px;
+    }
+
+    .row-item
+    {
+        padding-top: 1px;
+        padding-left: 5px;
+    }
 }
