@@ -3,11 +3,17 @@
     <ion-title>
       Contact
     </ion-title>
+    <ion-buttons end> 
+        <button ion-button icon-only (click)="actionFilter()">
+          <ion-icon name="md-person"></ion-icon>
+        </button> 
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
     <!-- <pre>{{ person | json }}</pre> -->
+    <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="searchPerson($event)"></ion-searchbar>
     <ion-refresher (ionRefresh)="doRefresh($event)">
       <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
